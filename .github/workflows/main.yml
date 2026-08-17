@@ -1,6 +1,10 @@
 name: CI
 
-on: [push, pull_request]
+# Legacy Vial GUI workflow. Cornix Studio uses cornix-studio.yml.
+# Keep this available for manual compatibility checks without running it on
+# every Cornix Studio push, pull request, or release tag.
+on:
+  workflow_dispatch:
 
 jobs:
   build-linux:
