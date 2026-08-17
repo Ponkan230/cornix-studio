@@ -1,0 +1,60 @@
+name: Cornix Studio
+
+on:
+  push:
+    paths:
+      - "studio/**"
+      - ".github/workflows/cornix-studio.yml"
+  pull_request:
+    paths:
+      - "studio/**"
+      - ".github/workflows/cornix-studio.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          targets: x86_64-pc-windows-msvc
+          components: rustfmt
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: studio
+
+      - name: Check frontend
+        run: npm run build
+        working-directory: studio
+
+      - name: Check Rust formatting
+        run: cargo fmt --manifest-path studio/src-tauri/Cargo.toml -- --check
+
+      - name: Run Rust tests
+        run: cargo test --manifest-path studio/src-tauri/Cargo.toml --locked
+
+      - name: Build standalone executable
+        run: npm run standalone
+        working-directory: studio
+
+      - name: Upload unsigned preview executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: cornix-studio-windows-unsigned
+          path: studio/src-tauri/target/release/cornix-studio.exe
+          if-no-files-found: error

@@ -1,0 +1,57 @@
+<!--
+  SPDX-License-Identifier: GPL-2.0-or-later
+  Copyright (C) 2026 Ponkan230 and Cornix Studio contributors
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">Cornix Studio icon</title>
+  <desc id="description">Two split keyboard halves connected by a wireless signal</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#192126"/>
+      <stop offset="1" stop-color="#090d0f"/>
+    </linearGradient>
+    <linearGradient id="case" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#303940"/>
+      <stop offset="1" stop-color="#1a2126"/>
+    </linearGradient>
+    <filter id="lime-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="56" y="56" width="912" height="912" rx="230" fill="url(#background)"/>
+  <rect x="68" y="68" width="888" height="888" rx="218" fill="none" stroke="#31401f" stroke-width="20"/>
+
+  <g stroke="#56616a" stroke-width="20" stroke-linejoin="round">
+    <path d="M172 310Q180 258 235 245L427 208Q468 201 478 244L438 724Q433 773 383 784L205 821Q154 831 145 780Z" fill="url(#case)"/>
+    <path d="M852 310Q844 258 789 245L597 208Q556 201 546 244L586 724Q591 773 641 784L819 821Q870 831 879 780Z" fill="url(#case)"/>
+  </g>
+
+  <g fill="#11171b" stroke="#73808a" stroke-width="10">
+    <rect x="213" y="302" width="94" height="94" rx="24" transform="rotate(-7 260 349)"/>
+    <rect x="331" y="278" width="94" height="94" rx="24" transform="rotate(-7 378 325)"/>
+    <rect x="222" y="426" width="94" height="94" rx="24" transform="rotate(-7 269 473)"/>
+    <rect x="340" y="402" width="94" height="94" rx="24" transform="rotate(-7 387 449)"/>
+    <rect x="235" y="550" width="94" height="94" rx="24" transform="rotate(-7 282 597)"/>
+    <rect x="351" y="526" width="94" height="94" rx="24" transform="rotate(-7 398 573)"/>
+
+    <rect x="717" y="302" width="94" height="94" rx="24" transform="rotate(7 764 349)"/>
+    <rect x="599" y="278" width="94" height="94" rx="24" transform="rotate(7 646 325)"/>
+    <rect x="708" y="426" width="94" height="94" rx="24" transform="rotate(7 755 473)"/>
+    <rect x="590" y="402" width="94" height="94" rx="24" transform="rotate(7 637 449)"/>
+    <rect x="695" y="550" width="94" height="94" rx="24" transform="rotate(7 742 597)"/>
+    <rect x="579" y="526" width="94" height="94" rx="24" transform="rotate(7 626 573)"/>
+  </g>
+
+  <g fill="#baff35" stroke="#d5ff73" stroke-width="9">
+    <rect x="325" y="648" width="116" height="92" rx="28" transform="rotate(-17 383 694)"/>
+    <rect x="583" y="648" width="116" height="92" rx="28" transform="rotate(17 641 694)"/>
+  </g>
+
+  <g fill="none" stroke="#baff35" stroke-linecap="round" filter="url(#lime-glow)">
+    <path d="M470 440Q512 406 554 440" stroke-width="25"/>
+    <path d="M486 490Q512 470 538 490" stroke-width="25"/>
+  </g>
+  <circle cx="512" cy="538" r="20" fill="#baff35" filter="url(#lime-glow)"/>
+</svg>

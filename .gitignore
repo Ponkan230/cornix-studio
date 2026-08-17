@@ -3,3 +3,10 @@ target
 __pycache__
 *.pyc
 .idea
+studio/node_modules/
+studio/dist/
+studio/src-tauri/target/
+studio/src-tauri/gen/
+studio/vite.log
+.cargo-home/
+.rustup-toolchain/
