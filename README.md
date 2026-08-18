@@ -2,23 +2,63 @@
   <img src="studio/src-tauri/icons/128x128.png" width="112" height="112" alt="Cornix Studio icon">
 </p>
 
-# Cornix Studio
+<h1 align="center">Cornix Studio</h1>
+
+<p align="center">
+  Cornix LPのキーマップを、USBでもBluetoothでも編集できるWindowsアプリ
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ponkan230/cornix-studio/releases/tag/v0.1.0-preview.1"><img alt="Release" src="https://img.shields.io/github/v/release/Ponkan230/cornix-studio?include_prereleases&sort=semver&style=flat-square"></a>
+  <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?style=flat-square&logo=windows11">
+  <a href="COPYING"><img alt="License" src="https://img.shields.io/github/license/Ponkan230/cornix-studio?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ponkan230/cornix-studio/releases/download/v0.1.0-preview.1/cornix-studio.exe"><strong>Windows版をダウンロード（Preview 0.1）</strong></a>
+  ·
+  <a href="https://github.com/Ponkan230/cornix-studio/releases/tag/v0.1.0-preview.1">リリースノート</a>
+  ·
+  <a href="https://github.com/Ponkan230/cornix-studio/issues/new">不具合を報告</a>
+</p>
+
+<p align="center">
+  <a href="docs/images/cornix-studio-keymap.png"><img src="docs/images/cornix-studio-keymap.png" width="100%" alt="Cornix StudioでCornix LPのキーマップを表示している画面"></a>
+</p>
+
+Cornix Studio is an unofficial, fast Vial-compatible Windows configurator for
+the Cornix LP split mechanical keyboard. It supports USB and paired Bluetooth
+HID connections, JIS keycodes, live key/layer monitoring, backup and firmware updates.
+
+## まず使ってみる
+
+1. [`cornix-studio.exe`](https://github.com/Ponkan230/cornix-studio/releases/download/v0.1.0-preview.1/cornix-studio.exe)をダウンロードします。
+2. USBで接続するか、Windowsの「Bluetoothとデバイス」でCornix LPをペアリングします。
+3. アプリを起動し、一覧からCornix LPを選択します。
+
+インストーラーは不要です。現在のプレビュー版はコード署名を行っていないため、
+Windows SmartScreenの警告が表示される場合があります。配布元が
+`github.com/Ponkan230/cornix-studio`、ファイル名が`cornix-studio.exe`であることを確認してください。
+
+実機を接続しなくても、起動画面の「実機なしでデモを開く」から操作を確認できます。
+
+## 主な特長
+
+- USB・Bluetoothのどちらでもキーマップを編集
+- Cornix LPの実機形状、10レイヤー、JIS/USキーコードに対応
+- 押したキーと移動したレイヤーをリアルタイム表示
+- コンボ、マクロ、QMK詳細設定、バックアップ、ファームウェア更新を一つのアプリに統合
 
 > [!IMPORTANT]
 > Cornix Studioは[Ponkan230](https://github.com/Ponkan230)が開発する非公式のコミュニティプロジェクトです。
 > Cornix、Jezail Funder/KeyWorks、Vialの各メーカー・プロジェクトによる公式アプリではなく、
 > 提携・承認関係もありません。
 
-Cornix LP向けの高速なVial互換設定アプリです。従来のPython/PyQt版
-`vial-gui`を参考に、通信部分をRust、デスクトップUIをTauri 2で
-再実装しています。
+従来のPython/PyQt版`vial-gui`を参考に、通信部分をRust、
+デスクトップUIをTauri 2で再実装しています。
 
 元のVial GUIは互換性確認のため、このリポジトリ直下に残しています。
 新しいアプリは [`studio`](studio) にあります。
-
-ソースコードとリリースは
-[`Ponkan230/cornix-studio`](https://github.com/Ponkan230/cornix-studio)
-で公開します。
 
 ## 現在できること
 
